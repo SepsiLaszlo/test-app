@@ -1,0 +1,5 @@
+<%= current_user&.email || "Nincs bejelentkezve" %>
+<%= link_to "Sign-in", new_user_session_path %>
+<%= button_to "Sign-out", destroy_user_session_path, method: :delete %>
+
+<%= link_to "Sign in with Auth.sch", user_authsch_omniauth_authorize_path %>
