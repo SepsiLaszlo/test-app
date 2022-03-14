@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create the `.env` file based on the `.env.example`.
 
-Things you may want to cover:
+```bash
+cp .env.example .env
+```
 
-* Ruby version
+Register your app at https://auth.sch.bme.hu/, and set the values `AUTHSCH_CLIENT`, `AUTHSCH_KEY` in the `.env`.
 
-* System dependencies
+## Possible errors
+You might encounter the following error:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+```
+Just delete the cookies for the site and reload.
